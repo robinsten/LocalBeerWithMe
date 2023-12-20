@@ -46,7 +46,7 @@ public class Cigarettes extends AppCompatActivity {
             LostLifetime.setText(smokedCigarettesCount * 10 + " min /     "
                     + lostHours + " h /           "
                     + lostDays + " Tage");
-            //test
+            //testll
 
         });
 
