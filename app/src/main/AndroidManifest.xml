@@ -25,6 +25,7 @@
 
         <!-- Add the Cigarettes activity -->
         <activity android:name=".Cigarettes" />
+        <activity android:name=".Alcohol" />
 
     </application>
 

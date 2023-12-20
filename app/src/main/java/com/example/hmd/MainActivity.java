@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
             Intent nextPage = new Intent(MainActivity.this, Cigarettes.class);
             startActivity(nextPage);
         });
+        alkohol.setOnClickListener(v -> {
+            Intent nextPage = new Intent(MainActivity.this, Alcohol.class);
+            startActivity(nextPage);
+        });
 
 
     }
