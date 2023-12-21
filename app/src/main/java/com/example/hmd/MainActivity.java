@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button weed = findViewById(R.id.weed);
         Button zigaretten = findViewById(R.id.cigarettes);
         Button snus = findViewById(R.id.snus);
-        Button overwiev = findViewById(R.id.overwiev);
+        Button overview = findViewById(R.id.overwiev);
 
         zigaretten.setOnClickListener(v -> {
             Intent nextPage = new Intent(MainActivity.this, Cigarettes.class);
@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
             Intent nextPage = new Intent(MainActivity.this, Alcohol.class);
             startActivity(nextPage);
         });
-        snus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent nextPage = new Intent(MainActivity.this, Snus.class);
-                startActivity(nextPage);
-            }
+        snus.setOnClickListener(v -> {
+            Intent nextPage = new Intent(MainActivity.this, Snus.class);
+            startActivity(nextPage);
         });
-
+        weed.setOnClickListener(v -> {
+            Intent nextPage = new Intent(MainActivity.this, Weed.class);
+            startActivity(nextPage);
+        });
 
     }
 }

@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Add the Cigarettes activity -->
         <activity android:name=".Cigarettes" />
         <activity android:name=".Alcohol" />
         <activity android:name=".Snus" />
+        <activity android:name=".Weed" />
 
 
     </application>

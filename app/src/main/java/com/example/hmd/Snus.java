@@ -2,7 +2,7 @@ package com.example.hmd;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,7 +24,7 @@ public class Snus  extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snus);
-        addOne = findViewById(R.id.addOneSnus);
+        addOne = findViewById(R.id.add10mg);
         All = findViewById(R.id.Snusoverview);
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SnusGesamt = sharedPreferences.getInt(SNUS_TAKEN_KEY, 0);
