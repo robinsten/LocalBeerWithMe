@@ -27,6 +27,7 @@
         <activity android:name=".Alcohol" />
         <activity android:name=".Snus" />
         <activity android:name=".Weed" />
+        <activity android:name=".Overwiev" />
 
 
     </application>

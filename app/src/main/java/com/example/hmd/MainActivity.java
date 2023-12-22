@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
             Intent nextPage = new Intent(MainActivity.this, Weed.class);
             startActivity(nextPage);
         });
+        overview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(MainActivity.this, Overwiev.class);
+                startActivity(nextPage);
+            }
+        });
 
     }
 }
