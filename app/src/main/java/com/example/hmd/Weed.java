@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Weed  extends AppCompatActivity {
 
     Button addZeroPointOne;
+    Button goBack;
     private static final String PREFS_NAME = "MyPrefs";
     private static final String WEED_SMOKED_KEY = "WeedSmoked";
 
@@ -23,11 +24,12 @@ public class Weed  extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.snus);
+        setContentView(R.layout.weed);
         addZeroPointOne = findViewById(R.id.add10mg);
         All = findViewById(R.id.Snusoverview);
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         WeedGesamt = sharedPreferences.getInt(WEED_SMOKED_KEY, 0);
+        goBack = findViewById(R.id.goBackWeed);
 
         addZeroPointOne.setOnClickListener(v -> {
             WeedGesamt++;
@@ -37,5 +39,8 @@ public class Weed  extends AppCompatActivity {
             All.setText("Weed gesamt: " + WeedGesamt + "00mg \n" + "Kosten ca.: " + WeedGesamt + "€");
 
         });
+        goBack.setOnClickListener(v -> finish());
+        All.setText("Weed gesamt: " + WeedGesamt + "00mg \n" + "Kosten ca.: " + WeedGesamt + "€");
+
     }
 }

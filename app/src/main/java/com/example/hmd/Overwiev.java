@@ -2,6 +2,7 @@ package com.example.hmd;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ public class Overwiev extends AppCompatActivity {
     private int Schnapsdrunk;
     private int Winedrunk;
     private float PureAlcohol;
+    private Button goBack;
 
 
 
@@ -44,6 +46,8 @@ public class Overwiev extends AppCompatActivity {
         setContentView(R.layout.overview);
         Alles = findViewById(R.id.UebersichtFeld);
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+
+        goBack = findViewById(R.id.backFromOverview);
 
         smokedCigarettesCount = sharedPreferences.getInt(SMOKED_CIGARETTES_KEY, 0);
         WeedGesamt = sharedPreferences.getInt(WEED_SMOKED_KEY, 0);
@@ -64,6 +68,7 @@ public class Overwiev extends AppCompatActivity {
                 "\n" +  "Insgesamter Purer Alkohol in ml: " + PureAlcohol + "\n" +
                 "Geschätzter Gezahlter Preis in €: " + (
                         WeedGesamt + smokedCigarettesCount*0.35 + SnusGesamt*0.23 + Beersdrunk + Liquordrunk + Schnapsdrunk*2+Winedrunk*3+ drunkenEnergy+drunkenCoffee*4+ takenPills*0.37));
+        goBack.setOnClickListener(v -> finish());
 
     }
 }

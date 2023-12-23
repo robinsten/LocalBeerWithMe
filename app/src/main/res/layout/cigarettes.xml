@@ -29,7 +29,7 @@
         android:id="@+id/CigarettesCost"
         android:layout_width="109dp"
         android:layout_height="58dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +39,19 @@
         android:id="@+id/LostLifetime"
         android:layout_width="109dp"
         android:layout_height="58dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CigarettesCost" />
+
+    <Button
+        android:id="@+id/goBackCigarettes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zurück"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LostLifetime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

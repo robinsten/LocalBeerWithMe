@@ -16,6 +16,7 @@ public class Snus  extends AppCompatActivity {
     private static final String SNUS_TAKEN_KEY = "SnusTaken";
 
     private int SnusGesamt;
+    private Button goBack;
 
     private SharedPreferences sharedPreferences;
     TextView All;
@@ -28,6 +29,7 @@ public class Snus  extends AppCompatActivity {
         All = findViewById(R.id.Snusoverview);
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SnusGesamt = sharedPreferences.getInt(SNUS_TAKEN_KEY, 0);
+        goBack = findViewById(R.id.goBackSnus);
 
         addOne.setOnClickListener(v -> {
             SnusGesamt++;
@@ -37,5 +39,7 @@ public class Snus  extends AppCompatActivity {
             All.setText("Snus gesamt: " + SnusGesamt + "\n" + "Kosten ca.: " + SnusGesamt*23/100 + "€");
 
         });
+        goBack.setOnClickListener(v -> finish());
+        All.setText("Snus gesamt: " + SnusGesamt + "\n" + "Kosten ca.: " + SnusGesamt*23/100 + "€");
     }
 }

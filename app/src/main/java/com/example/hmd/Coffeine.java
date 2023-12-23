@@ -2,7 +2,6 @@ package com.example.hmd;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,6 +18,7 @@ public class Coffeine extends AppCompatActivity {
     private int drunkenEnergy;
     private int takenPills;
     private TextView koffeinuebersicht;
+    private Button goBack;
 
 
     private SharedPreferences sharedPreferences;
@@ -35,6 +35,7 @@ public class Coffeine extends AppCompatActivity {
         drunkenEnergy = sharedPreferences.getInt(DRUNKEN_ENERGY_DRINK,0);
         takenPills = sharedPreferences.getInt(PILLS_TAKEN,0);
         koffeinuebersicht = findViewById(R.id.koffeinuebersicht);
+        goBack = findViewById(R.id.goBackCoffeine);
         Kaffe.setOnClickListener(v -> {
             drunkenCoffee++;
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -63,5 +64,10 @@ public class Coffeine extends AppCompatActivity {
         });
         koffeinuebersicht.setText("Kaffe getrunken: " + drunkenCoffee + "\n" + "Energiedrinks getrunken: " +
                 drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills + "\n" +
-                "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200));}
+                "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200));
+
+    goBack.setOnClickListener(v -> finish()
+    );
+
+    }
 }

@@ -2,6 +2,7 @@ package com.example.hmd;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,6 +19,7 @@ public class Alcohol extends AppCompatActivity {
     private static final String DRUNKEN_SCHNAPPS_KEY = "drunkenSchnapps";
     private static final String PURE_ALCOHOL_KEY = "pureAlcohol";
     private Button submit;
+    private Button goBack;
     private SharedPreferences sharedPreferences;
     private int Beersdrunk;
     private int Liquordrunk;
@@ -44,6 +46,7 @@ public class Alcohol extends AppCompatActivity {
         PureAlcohol = sharedPreferences.getFloat(PURE_ALCOHOL_KEY,0);
 
         Prozent = findViewById(R.id.prozent);
+        goBack = findViewById(R.id.goBackAlk);
 
 
         radioGroup = findViewById(R.id.radioGroup);
@@ -69,6 +72,12 @@ public class Alcohol extends AppCompatActivity {
                     "Gesamtmenge purer Alkohol in ml: " + PureAlcohol);
 
         });
+        goBack.setOnClickListener(v -> finish());
+        AlcoholinL.setText("Bier getrunken(500ml): " + Beersdrunk + "\n" +
+                "Liquorshots(20ml): " + Liquordrunk + "\n" +
+                "Wein getrunken(200ml): " + Winedrunk + "\n" +
+                "Schnapsshots(20ml): " + Schnapsdrunk + "\n" +
+                "Gesamtmenge purer Alkohol in ml: " + PureAlcohol);
 
     }
     private void handleRadioButtonClick(int checkedId, TextView Prozent) {

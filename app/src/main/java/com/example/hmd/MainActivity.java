@@ -23,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         Button snus = findViewById(R.id.snus);
         Button overview = findViewById(R.id.overwiev);
         Button coffeine = findViewById(R.id.coffeine);
+        Button loeschen = findViewById(R.id.FormatEverything);
+
+        loeschen.setOnClickListener(v -> {
+            Intent nextPage = new Intent(MainActivity.this, FormatEverything.class);
+            startActivity(nextPage);
+        });
 
         zigaretten.setOnClickListener(v -> {
             Intent nextPage = new Intent(MainActivity.this, Cigarettes.class);

@@ -6,55 +6,62 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/addCoffee"
+        android:id="@+id/alcohol_zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Kaffee"
+        android:text="Alkohol"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/energyDrink"
+        android:id="@+id/cigarettes_zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Energy Drink"
+        android:text="Zigaretten"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCoffee" />
+        app:layout_constraintTop_toBottomOf="@+id/alcohol_zero" />
 
     <Button
-        android:id="@+id/coffeinmeds"
+        android:id="@+id/coffeine_zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Koffein Tablette"
+        android:text="Koffein"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/energyDrink" />
-
-    <TextView
-        android:id="@+id/koffeinuebersicht"
-        android:layout_width="224dp"
-        android:layout_height="160dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coffeinmeds"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintTop_toBottomOf="@+id/cigarettes_zero" />
 
     <Button
-        android:id="@+id/goBackCoffeine"
+        android:id="@+id/snus_zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Snus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffeine_zero" />
+
+    <Button
+        android:id="@+id/weed_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Weed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snus_zero" />
+
+    <Button
+        android:id="@+id/goBackFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
         android:text="Zurück"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/koffeinuebersicht" />
+        app:layout_constraintTop_toBottomOf="@+id/weed_zero" />
 </androidx.constraintlayout.widget.ConstraintLayout>

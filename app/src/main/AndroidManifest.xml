@@ -29,6 +29,7 @@
         <activity android:name=".Weed" />
         <activity android:name=".Overwiev" />
         <activity android:name=".Coffeine" />
+        <activity android:name=".FormatEverything" />
 
 
     </application>
