@@ -20,6 +20,13 @@ public class Overwiev extends AppCompatActivity {
     private  static final String DRUNKEN_LIQUOR_KEY = "drunkenLiquor";
     private static final String DRUNKEN_SCHNAPPS_KEY = "drunkenSchnapps";
     private static final String PURE_ALCOHOL_KEY = "pureAlcohol";
+
+    private static final String DRUNKEN_COFFEE_KEY = "drunkenCoffee";
+    private static final String DRUNKEN_ENERGY_DRINK = "drunkenEnergy";
+    private static final String PILLS_TAKEN = "takenPills";
+    private int drunkenCoffee;
+    private int drunkenEnergy;
+    private int takenPills;
     private int smokedCigarettesCount;
     private int WeedGesamt;
     private int SnusGesamt;
@@ -46,10 +53,17 @@ public class Overwiev extends AppCompatActivity {
         Schnapsdrunk = sharedPreferences.getInt(DRUNKEN_SCHNAPPS_KEY,0);
         Winedrunk = sharedPreferences.getInt(DRUNKEN_WINE_KEY,0);
         PureAlcohol = sharedPreferences.getFloat(PURE_ALCOHOL_KEY,0);
+        drunkenCoffee = sharedPreferences.getInt(DRUNKEN_COFFEE_KEY,0);
+        drunkenEnergy = sharedPreferences.getInt(DRUNKEN_ENERGY_DRINK,0);
+        takenPills = sharedPreferences.getInt(PILLS_TAKEN,0);
         Alles.setText("Gerauchte Zigaretten: " + smokedCigarettesCount + "\n" + "Weed in Gramm: " + WeedGesamt/10 + "\n" +
                 "Anzahl an Snus: " + SnusGesamt + "\n" + "Getrunkene Bier: " + Beersdrunk + "\n" + "Getrunkener Wein (200ml): " + Winedrunk + "\n"+
                 "Getrunkene Likörshots: " + Liquordrunk + "\n" + "Getrunkene Schnapsshots: " + Schnapsdrunk + "\n" +
-                "Insgesamter Purer Alkohol in ml: " + PureAlcohol + "\n" + "Geschätzter Gezahlter Preis in €: " + (WeedGesamt + smokedCigarettesCount*0.35 + SnusGesamt*0.23 + Beersdrunk + Liquordrunk + Schnapsdrunk*2+Winedrunk*3));
+                "Getrunkener Kaffe: " + drunkenCoffee + "\n" + "Getrunkener Energydrink: " +
+                drunkenEnergy + "\n" + "Genommene Koffeintabletten: " + takenPills + "\n" + "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200) +
+                "\n" +  "Insgesamter Purer Alkohol in ml: " + PureAlcohol + "\n" +
+                "Geschätzter Gezahlter Preis in €: " + (
+                        WeedGesamt + smokedCigarettesCount*0.35 + SnusGesamt*0.23 + Beersdrunk + Liquordrunk + Schnapsdrunk*2+Winedrunk*3+ drunkenEnergy+drunkenCoffee*4+ takenPills*0.37));
 
     }
 }

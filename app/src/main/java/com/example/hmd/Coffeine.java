@@ -41,7 +41,8 @@ public class Coffeine extends AppCompatActivity {
             editor.putInt(DRUNKEN_COFFEE_KEY, drunkenCoffee);
             editor.apply();
             koffeinuebersicht.setText("Kaffe getrunken: " + drunkenCoffee + "\n" + "Energiedrinks getrunken: " +
-                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills);
+                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills + "\n" +
+                    "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200));
         });
         Energy.setOnClickListener(v -> {
             drunkenEnergy++;
@@ -49,18 +50,18 @@ public class Coffeine extends AppCompatActivity {
             editor.putInt(DRUNKEN_ENERGY_DRINK, drunkenEnergy);
             editor.apply();
             koffeinuebersicht.setText("Kaffe getrunken: " + drunkenCoffee + "\n" + "Energiedrinks getrunken: " +
-                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills);
-        });
+                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills + "\n" +
+                    "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200)); });
         KoffeinTablette.setOnClickListener(v -> {
             takenPills++;
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(PILLS_TAKEN, takenPills);
             editor.apply();
             koffeinuebersicht.setText("Kaffe getrunken: " + drunkenCoffee + "\n" + "Energiedrinks getrunken: " +
-                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills);
-
+                    drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills + "\n" +
+                    "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200));
         });
         koffeinuebersicht.setText("Kaffe getrunken: " + drunkenCoffee + "\n" + "Energiedrinks getrunken: " +
-                drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills);
-    }
+                drunkenEnergy + "\n" + "Koffeintabletten genommen: " +takenPills + "\n" +
+                "Gesamtmenge Koffein in mg: " + (drunkenCoffee*100 + drunkenEnergy*150+takenPills*200));}
 }
